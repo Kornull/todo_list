@@ -1,3 +1,11 @@
+import styles from './index.module.scss';
+
 export const App: React.FC = () => {
-  return <article>12345</article>;
+  return (
+    <article className={styles.article}>
+      <h1 className={styles.articleTitle}>To Do App</h1>
+      <section className={styles.articleSection}></section>
+      <section className={styles.articleSection}></section>
+    </article>
+  );
 };
