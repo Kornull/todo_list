@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import useToDoStore from '../../data/store/useToDoStore';
+import InputPlus from '../components/InputPlus';
 
-import styles from './index.module.scss';
+import styles from './App.module.scss';
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
   const [tasks, createTask, updateTask, removeTask] = useToDoStore((state) => [
     state.tasks,
     state.createTask,
@@ -11,17 +12,19 @@ export const App: React.FC = () => {
     state.removeTask,
   ]);
 
-  console.log(tasks);
-
-  useEffect(() => {
-    createTask('eeeecdwcscscscscsc');
-  }, []);
+  const createNewTask = (title: string) => {
+    createTask(title);
+  };
 
   return (
-    <article className={styles.article}>
+    <div className={styles.article}>
       <h1 className={styles.articleTitle}>To Do App</h1>
+      <section className={styles.articleSection}>
+        <InputPlus addNewTask={createNewTask} />
+      </section>
       <section className={styles.articleSection}></section>
-      <section className={styles.articleSection}></section>
-    </article>
+    </div>
   );
 };
+
+export default App;

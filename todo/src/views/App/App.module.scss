@@ -1,11 +1,15 @@
+@import '../styles/colors.scss';
+
 .article {
-  min-width: 600px;
-  background: #ffffff;
+  width: 100%;
+  background: White;
   border-radius: 20px;
   padding: 20px 55px;
 
   &Title {
     font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
     margin-bottom: 0.3em;
     text-align: center;
   }

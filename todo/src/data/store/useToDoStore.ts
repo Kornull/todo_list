@@ -16,9 +16,16 @@ type ToDo = {
 };
 
 const useToDoStore = create<ToDo>((set, get) => ({
-  tasks: [],
+  tasks: [
+    {
+      id: 'assssssss',
+      title: 'HUUUUUUU',
+      createAt: 452145215,
+    },
+  ],
   createTask: (title) => {
     const { tasks } = get();
+    console.log(tasks);
     const newTask = {
       id: generateId(),
       title,

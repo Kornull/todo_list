@@ -1,0 +1,53 @@
+@import '../../styles/colors.scss';
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+
+  &Value {
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: 1px solid MidnightBlue;
+    border: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+
+    &:focus {
+      box-shadow: 0 0 10px SlateBlue;
+      outline: 1px solid MidnightBlue;
+    }
+  }
+
+  :focus + &Button {
+    box-shadow: 2px 0 10px SlateBlue;
+  }
+
+  &Button {
+    padding: 15px;
+    background-color: DarkSlateBlue;
+    background-image: url('./images//plus.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid MidnightBlue;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+
+    &:hover {
+      background-color: MidnightBlue;
+    }
+    &:active {
+      background-color: SlateBlue;
+      box-shadow: 2px 0 10px SlateBlue;
+    }
+  }
+  :active > &Value {
+    box-shadow: 0 0 10px SlateBlue;
+  }
+}
