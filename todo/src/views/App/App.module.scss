@@ -2,9 +2,12 @@
 
 .article {
   width: 100%;
-  background: White;
+  background: $White;
   border-radius: 20px;
   padding: 20px 55px;
+  @media (max-width: $size420px) {
+    padding: 10px 20px;
+  }
 
   &Title {
     font-size: 40px;
@@ -13,5 +16,9 @@
     text-decoration: underline;
     margin-bottom: 0.3em;
     text-align: center;
+
+    @media (max-width: $size420px) {
+      font-size: 26px;
+    }
   }
 }

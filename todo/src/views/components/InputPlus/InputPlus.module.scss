@@ -8,55 +8,55 @@
 
   &Value {
     width: 100%;
-    max-width: 270px;
+    max-width: 350px;
     height: 30px;
     font-size: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    outline: 1px solid MidnightBlue;
-    background-color: LightGrey;
-    color: MidnightBlue;
+    outline: 1px solid $MidnightBlue;
+    background-color: $LightGrey;
+    color: $MidnightBlue;
     border: none;
     padding: 5px 10px;
     transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 
     &:focus {
-      box-shadow: 0 0 10px SlateBlue;
-      outline: 1px solid MidnightBlue;
+      box-shadow: 0 0 10px $SlateBlue;
+      outline: 1px solid $MidnightBlue;
     }
 
     &::placeholder {
-      color: SlateBlue;
+      color: $SlateBlue;
     }
   }
 
   :focus + &Button {
-    box-shadow: 2px 0 10px SlateBlue;
+    box-shadow: 2px 0 10px $SlateBlue;
   }
 
   &Button {
     padding: 15px;
-    background-color: DarkSlateBlue;
+    background-color: $DarkSlateBlue;
     background-image: url('./images//plus.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 1px solid MidnightBlue;
+    border: 1px solid $MidnightBlue;
     outline: none;
     cursor: pointer;
     transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 
     &:hover {
-      background-color: MidnightBlue;
+      background-color: $MidnightBlue;
     }
     &:active {
-      background-color: SlateBlue;
-      box-shadow: 2px 0 10px SlateBlue;
+      background-color: $SlateBlue;
+      box-shadow: 2px 0 10px $SlateBlue;
     }
   }
   :active > &Value {
-    box-shadow: 0 0 10px SlateBlue;
+    box-shadow: 0 0 10px $SlateBlue;
   }
 }
