@@ -7,10 +7,15 @@
   font-size: 18px;
 
   &Value {
+    width: 100%;
+    max-width: 270px;
     height: 30px;
+    font-size: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     outline: 1px solid MidnightBlue;
+    background-color: LightGrey;
+    color: MidnightBlue;
     border: none;
     padding: 5px 10px;
     transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -18,6 +23,10 @@
     &:focus {
       box-shadow: 0 0 10px SlateBlue;
       outline: 1px solid MidnightBlue;
+    }
+
+    &::placeholder {
+      color: SlateBlue;
     }
   }
 

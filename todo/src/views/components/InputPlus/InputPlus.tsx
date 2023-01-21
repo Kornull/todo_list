@@ -25,6 +25,7 @@ const InputPlus = ({ addNewTask }: InputPlusProps) => {
             addTask();
           }
         }}
+        placeholder='Type here'
       />
       <button
         className={styles.inputButton}
