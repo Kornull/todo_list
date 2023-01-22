@@ -9,8 +9,8 @@
   &Value {
     width: 100%;
     max-width: 350px;
-    height: 30px;
-    font-size: 20px;
+    height: 40px;
+    font: 20px/1.4 'Roboto', sans-serif;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     outline: 1px solid $MidnightBlue;
@@ -35,7 +35,7 @@
   }
 
   &Button {
-    padding: 15px;
+    padding:20px;
     background-color: $DarkSlateBlue;
     background-image: url('./images//plus.svg');
     background-position: center;

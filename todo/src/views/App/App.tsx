@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import useToDoStore from '../../data/store/useToDoStore';
 import InputPlus from '../components/InputPlus';
 
@@ -15,6 +14,8 @@ const App: React.FC = () => {
   const createNewTask = (title: string) => {
     createTask(title);
   };
+
+  console.log(tasks);
 
   return (
     <div className={styles.article}>
