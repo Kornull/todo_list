@@ -2,14 +2,14 @@ import { create } from 'zustand';
 
 import { generateId } from '../helper';
 
-type Task = {
+export type TaskType = {
   id: string;
   title: string;
   createAt: number;
 };
 
 type ToDo = {
-  tasks: Task[];
+  tasks: TaskType[];
   createTask: (title: string) => void;
   updateTask: (id: string, title: string) => void;
   removeTask: (id: string) => void;
@@ -17,11 +17,11 @@ type ToDo = {
 
 const useToDoStore = create<ToDo>((set, get) => ({
   tasks: [
-    // {
-    //   id: 'assssssss',
-    //   title: 'HUUUUUUU',
-    //   createAt: 452145215,
-    // },
+    {
+      id: 'assssssss',
+      title: 'HUUUUUUU',
+      createAt: 452145215,
+    },
   ],
   createTask: (title) => {
     const { tasks } = get();
