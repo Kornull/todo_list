@@ -5,6 +5,7 @@
   background: $White;
   border-radius: 20px;
   padding: 20px 55px;
+
   @media (max-width: $size420px) {
     padding: 10px 20px;
   }
@@ -20,5 +21,11 @@
     @media (max-width: $size420px) {
       font-size: 26px;
     }
+  }
+
+  &Text {
+    font-size: 18px;
+    text-align: center;
+    color: $Red;
   }
 }

@@ -23,7 +23,9 @@ const App: React.FC = () => {
       <section className={styles.articleSection}>
         <InputPlus addNewTask={createNewTask} />
       </section>
-      <section className={styles.articleSection}></section>
+      <section className={styles.articleSection}>
+        {!tasks.length ? <p className={styles.articleText}>There is no one task!</p> : <p> {tasks.length}</p>}
+      </section>
     </div>
   );
 };

@@ -9,8 +9,10 @@ const InputPlus = ({ addNewTask }: InputPlusProps) => {
   const [inputValue, setInputValue] = useState('');
 
   const addTask = useCallback(() => {
-    addNewTask(inputValue);
-    setInputValue('');
+    if (inputValue.length) {
+      addNewTask(inputValue);
+      setInputValue('');
+    }
   }, [inputValue]);
 
   return (
@@ -25,7 +27,7 @@ const InputPlus = ({ addNewTask }: InputPlusProps) => {
             addTask();
           }
         }}
-        placeholder='Type here'
+        placeholder="Type here"
       />
       <button
         className={styles.inputButton}
