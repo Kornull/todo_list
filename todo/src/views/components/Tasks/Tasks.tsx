@@ -1,6 +1,8 @@
 import useToDoStore, { TaskType } from '../../../data/store/useToDoStore';
 import Task from './Task';
 
+import styles from './Tasks.module.scss';
+
 const Tasks = () => {
   const [tasks, createTask, updateTask, removeTask] = useToDoStore((state) => [
     state.tasks,
@@ -10,7 +12,7 @@ const Tasks = () => {
   ]);
 
   return (
-    <div>
+    <div className={styles.tasks}>
       {tasks.map((task: TaskType) => (
         <Task
           key={task.id}

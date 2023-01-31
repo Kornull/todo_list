@@ -1,15 +1,18 @@
 @import '../../../styles/colors.scss';
 
 .task {
-  max-width: 66%;
+  max-width: 70%;
   width: 100%;
   margin: 0 auto 10px;
   display: flex;
   align-items: center;
   gap: 5px;
+  @media (max-width: $size620px) {
+    max-width: 96%;
+  }
 
   &Edit {
-    padding: 15px;
+    padding: 18px;
     background-color: $Green;
     border: 1px solid $Black;
     border-radius: 5px;
@@ -17,7 +20,7 @@
   }
 
   &Remove {
-    padding: 15px;
+    padding: 18px;
     border: 1px solid $Black;
     background-color: $Red;
     border-radius: 5px;
@@ -27,7 +30,7 @@
     font-size: 20px;
     max-width: 80%;
     width: 100%;
-    padding: 4px 5px;
+    padding: 4px 25px 4px 5px;
     border: 1px solid $Black;
     background-color: $LightGrey;
     border-radius: 5px;

@@ -1,0 +1,27 @@
+@import '../../styles/colors.scss';
+
+
+.tasks {
+  max-height: 580px;
+  overflow: auto;
+  padding: 5px 0;
+  @media (max-width: $size420px) {
+    max-height: 420px;
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px #223c5033 inset;
+  background-color: $GhostWhite;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, $AquaLight, $BlueLight);
+}
