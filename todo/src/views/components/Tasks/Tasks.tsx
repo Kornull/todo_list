@@ -13,6 +13,7 @@ const Tasks = () => {
     <div>
       {tasks.map((task: TaskType) => (
         <Task
+          key={task.id}
           id={task.id}
           title={task.title}
           onEdit={updateTask}

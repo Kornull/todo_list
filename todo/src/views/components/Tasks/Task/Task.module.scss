@@ -1,0 +1,37 @@
+@import '../../../styles/colors.scss';
+
+.task {
+  max-width: 66%;
+  width: 100%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &Edit {
+    padding: 15px;
+    background-color: $Green;
+    border: 1px solid $Black;
+    border-radius: 5px;
+
+  }
+
+  &Remove {
+    padding: 15px;
+    border: 1px solid $Black;
+    background-color: $Red;
+    border-radius: 5px;
+  }
+
+  &Text {
+    font-size: 20px;
+    max-width: 80%;
+    width: 100%;
+    padding: 4px 5px;
+    border: 1px solid $Black;
+    background-color: $LightGrey;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
+}
