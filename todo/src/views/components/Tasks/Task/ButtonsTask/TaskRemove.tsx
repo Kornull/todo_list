@@ -1,5 +1,15 @@
-import styles from '../Task.module.scss'
+import styles from '../Task.module.scss';
 
-export const TaskRemove = () => {
-  return <button className={styles.taskRemove} />;
+type RemoveProps = {
+  remove: (id: string) => void;
+  id:string
+};
+
+export const TaskRemove = ({ remove, id }: RemoveProps) => {
+  return (
+    <button
+      className={styles.taskRemove}
+      onClick={() => remove(id)}
+    />
+  );
 };

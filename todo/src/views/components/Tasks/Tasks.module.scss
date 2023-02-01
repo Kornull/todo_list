@@ -4,7 +4,8 @@
 .tasks {
   max-height: 580px;
   overflow: auto;
-  padding: 5px 0;
+  padding: 5px 6px;
+
   @media (max-width: $size420px) {
     max-height: 420px;
   }

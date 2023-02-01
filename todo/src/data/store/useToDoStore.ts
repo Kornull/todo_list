@@ -13,6 +13,7 @@ type ToDo = {
   createTask: (title: string) => void;
   updateTask: (id: string, title: string) => void;
   removeTask: (id: string) => void;
+  setTasks: (todo: TaskType[]) => void;
 };
 
 const useToDoStore = create<ToDo>((set, get) => ({
@@ -50,6 +51,12 @@ const useToDoStore = create<ToDo>((set, get) => ({
     set({
       tasks: tasks.filter((task) => task.id !== id),
     });
+  },
+
+  setTasks: (todo) => {
+    set({
+      tasks: [...todo]
+    })
   },
 }));
 
