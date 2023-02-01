@@ -26,7 +26,6 @@ const useToDoStore = create<ToDo>((set, get) => ({
   ],
   createTask: (title) => {
     const { tasks } = get();
-    console.log(tasks);
     const newTask = {
       id: generateId(),
       title,

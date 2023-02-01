@@ -28,10 +28,10 @@ const Task = ({ id, title, onEdit, onRemove, task }: TaskProps) => {
       value={task}
       whileDrag={{
         scale: 1.05,
+        pointerEvents: 'none',
       }}
-      className={styles.task}
-      onClick={() => console.log('click')}
       {...variants}
+      className={styles.task}
     >
       <TaskCheckbox />
       <Text text={title} />

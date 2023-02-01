@@ -1,6 +1,7 @@
 @import '../../../styles/colors.scss';
 
 .task {
+  position: relative;
   max-width: 70%;
   width: 100%;
   margin: 0 auto 10px;
@@ -8,7 +9,7 @@
   align-items: center;
   gap: 5px;
   cursor: pointer;
-  
+
   @media (max-width: $size620px) {
     max-width: 96%;
   }
@@ -38,5 +39,14 @@
     border-radius: 5px;
     overflow: hidden;
     text-overflow: ellipsis
+  }
+
+  &Animate {
+    position: absolute;
+    width: 20px;
+    min-height: 20px;
+    background-color: #000;
+    z-index: 2;
+    margin-bottom: 10px;
   }
 }
