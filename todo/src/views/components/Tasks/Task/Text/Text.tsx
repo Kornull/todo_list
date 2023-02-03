@@ -1,3 +1,4 @@
+import { TaskCheckbox } from '../ButtonsTask';
 import styles from '../Task.module.scss';
 
 type TextProps = {
@@ -5,5 +6,10 @@ type TextProps = {
 };
 
 export const Text = ({ text }: TextProps) => {
-  return <div className={styles.taskText}>{text}</div>;
+  return (
+    <div className={styles.taskText}>
+      <TaskCheckbox />
+      {text}
+    </div>
+  );
 };

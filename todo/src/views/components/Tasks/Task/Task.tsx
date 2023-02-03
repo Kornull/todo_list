@@ -33,7 +33,6 @@ const Task = ({ id, title, onEdit, onRemove, task }: TaskProps) => {
       {...variants}
       className={styles.task}
     >
-      <TaskCheckbox />
       <Text text={title} />
       <TaskEdit />
       <TaskRemove
