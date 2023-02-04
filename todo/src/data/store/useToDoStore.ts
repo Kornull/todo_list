@@ -6,6 +6,7 @@ export type TaskType = {
   id: string;
   title: string;
   createAt: number;
+  checked: boolean;
 };
 
 type ToDo = {
@@ -14,7 +15,8 @@ type ToDo = {
   updateTask: (id: string, title: string) => void;
   removeTask: (id: string) => void;
   setTasks: (todo: TaskType[]) => void;
-  setReadyTask: (id: string) => void;
+  setReadyTask: (id: string, checked: boolean) => void;
+  removeReadyTask: (id: string, checked: boolean) => void;
 };
 
 const useToDoStore = create<ToDo>((set, get) => ({
@@ -23,14 +25,17 @@ const useToDoStore = create<ToDo>((set, get) => ({
       id: 'assssssss',
       title: 'HUUUUUUU',
       createAt: 452145215,
+      checked: false,
     },
   ],
   createTask: (title) => {
     const { tasks } = get();
+    console.log(tasks);
     const newTask = {
       id: generateId(),
       title,
       createAt: Date.now(),
+      checked: false,
     };
 
     set({
@@ -59,12 +64,26 @@ const useToDoStore = create<ToDo>((set, get) => ({
     });
   },
 
-  setReadyTask: (id) => {
+  setReadyTask: (id, checked) => {
     const { tasks } = get();
-    const readyTask = tasks.filter((task) => task.id === id);
+    const readyTask = tasks.filter((task) => {
+      if (task.id === id) {
+        task.checked = checked;
+        return task;
+      }
+    });
     const newTasks = tasks.filter((task) => task.id !== id);
     set({
       tasks: [...newTasks, ...readyTask],
+    });
+  },
+  removeReadyTask: (id, checked) => {
+    const { tasks } = get();
+    set({
+      tasks: tasks.map((task) => ({
+        ...task,
+        checked: task.id === id ? checked : task.checked,
+      })),
     });
   },
 }));
