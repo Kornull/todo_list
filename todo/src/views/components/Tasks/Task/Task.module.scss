@@ -52,9 +52,8 @@
     appearance: none;
     width: 16px;
     height: 16px;
-    border-radius: 0.15em;
-    margin-right: 0.5em;
-    border: 0.15em solid $RoyalBlue;
+    border-radius:50%;
+    border: 2px solid $RoyalBlue;
     outline: none;
     cursor: pointer;
   }
@@ -63,24 +62,9 @@
     position: relative;
     background-color: $RoyalBlue;
     position: relative;
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: #fff;
-    }
-    &::after {
-      left: 0;
-      top: 5px;
-      rotate: -50deg;
-    }
-    &::before {
-      left: 0;
-      bottom: 5px;
-      rotate: 50deg;
-    }
+    background-image: url('public/emblemnoread.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
