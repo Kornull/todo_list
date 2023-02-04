@@ -1,15 +1,15 @@
 @import '../../styles/colors.scss';
 
-
 .tasks {
+  position: relative;
   max-height: 580px;
-  overflow: auto;
+  overflow: hidden;
+  overflow-y: auto;
   padding: 5px 6px;
 
   @media (max-width: $size420px) {
     max-height: 420px;
   }
-
 }
 
 ::-webkit-scrollbar {

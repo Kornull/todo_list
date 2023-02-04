@@ -44,25 +44,25 @@
   &CheckboxWrapper {
     position: absolute;
     left: 5px;
-    top: 15%;
+    top: 18%;
   }
 
   &CheckboxWrapper input[type='checkbox'] {
     -webkit-appearance: none;
     appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     border-radius:50%;
-    border: 2px solid $RoyalBlue;
+    border: 2px solid $MidnightBlue;
     outline: none;
     cursor: pointer;
   }
 
   &Checked {
     position: relative;
-    background-color: $RoyalBlue;
+    background-color: $MidnightBlue;
     position: relative;
-    background-image: url('public/emblemnoread.svg');
+    background-image: url('public/check_success.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
