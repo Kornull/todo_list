@@ -14,6 +14,7 @@ type ToDo = {
   updateTask: (id: string, title: string) => void;
   removeTask: (id: string) => void;
   setTasks: (todo: TaskType[]) => void;
+  setReadyTask: (id: string) => void;
 };
 
 const useToDoStore = create<ToDo>((set, get) => ({
@@ -54,8 +55,17 @@ const useToDoStore = create<ToDo>((set, get) => ({
 
   setTasks: (todo) => {
     set({
-      tasks: [...todo]
-    })
+      tasks: [...todo],
+    });
+  },
+
+  setReadyTask: (id) => {
+    const { tasks } = get();
+    const readyTask = tasks.filter((task) => task.id === id);
+    const newTasks = tasks.filter((task) => task.id !== id);
+    set({
+      tasks: [...newTasks, ...readyTask],
+    });
   },
 }));
 

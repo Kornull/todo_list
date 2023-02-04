@@ -1,4 +1,4 @@
-import useToDoStore, { TaskType } from '../../../data/store/useToDoStore';
+import useToDoStore from '../../../data/store/useToDoStore';
 import InputPlus from '../InputPlus';
 import Tasks from '../Tasks';
 
@@ -16,7 +16,6 @@ const App: React.FC = () => {
     createTask(title);
   };
 
-  console.log(tasks);
 
   return (
     <div className={styles.article}>
