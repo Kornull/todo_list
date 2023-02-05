@@ -9,19 +9,13 @@ import { variants } from '../../../../constants';
 type TaskProps = {
   id: string;
   title: string;
+  checked: boolean;
   onEdit: (id: string, title: string) => void;
   onRemove: (id: string) => void;
   task: TaskType;
 };
 
-const Task = ({ id, title, onEdit, onRemove, task }: TaskProps) => {
-  const [tasks, updateTask, removeTask, setTasks] = useToDoStore((state) => [
-    state.tasks,
-    state.updateTask,
-    state.removeTask,
-    state.setTasks,
-  ]);
-
+const Task = ({ id, title, onEdit, onRemove, task, checked }: TaskProps) => {
   return (
     <Reorder.Item
       as="div"
@@ -33,10 +27,14 @@ const Task = ({ id, title, onEdit, onRemove, task }: TaskProps) => {
       {...variants}
       className={styles.task}
     >
-      <Text text={title} id={id} />
+      <Text
+        text={title}
+        id={id}
+        checked={checked}
+      />
       <TaskEdit />
       <TaskRemove
-        remove={removeTask}
+        remove={onRemove}
         id={id}
       />
     </Reorder.Item>

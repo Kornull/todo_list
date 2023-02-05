@@ -1,5 +1,4 @@
 import { Reorder, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 import useToDoStore, { TaskType } from '../../../data/store/useToDoStore';
 import Task from './Task';
@@ -28,6 +27,7 @@ const Tasks = () => {
             key={task.id}
             id={task.id}
             title={task.title}
+            checked={task.checked}
             onEdit={updateTask}
             onRemove={removeTask}
             task={task}

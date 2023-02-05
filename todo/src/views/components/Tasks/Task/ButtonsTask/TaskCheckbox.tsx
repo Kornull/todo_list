@@ -1,37 +1,32 @@
-import { MouseEventHandler, useEffect, useState } from 'react';
 import useToDoStore from '../../../../../data/store';
 
 import styles from '../Task.module.scss';
 
 type CheckboxProps = {
   id: string;
+  checked: boolean;
 };
 
-export const TaskCheckbox = ({ id }: CheckboxProps) => {
+export const TaskCheckbox = ({ id, checked }: CheckboxProps) => {
   const [setReadyTask, removeReadyTask] = useToDoStore((state) => [
     state.setReadyTask,
     state.removeReadyTask,
   ]);
-  const [cheked, setChecked] = useState(false);
 
   const handleClick = (ev: React.MouseEvent) => {
     ev.stopPropagation();
-    setChecked(!cheked);
-  };
-
-  useEffect(() => {
-    if (cheked) {
-      setReadyTask(id, cheked);
+    if (checked) {
+      removeReadyTask(id, !checked);
     } else {
-      removeReadyTask(id, cheked);
+      setReadyTask(id, !checked);
     }
-  }, [cheked]);
+  };
 
   return (
     <div className={styles.taskCheckboxWrapper}>
       <input
         type="checkbox"
-        className={cheked ? styles.taskChecked : ''}
+        className={checked ? styles.taskChecked : ''}
         onClick={handleClick}
       />
     </div>

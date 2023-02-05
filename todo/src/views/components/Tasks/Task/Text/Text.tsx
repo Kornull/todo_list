@@ -1,14 +1,14 @@
-import { MouseEventHandler } from 'react';
 import { TaskCheckbox } from '../ButtonsTask';
 import styles from '../Task.module.scss';
 
 type TextProps = {
   text: string;
   id: string;
+  checked: boolean;
 };
 
-export const Text = ({ text, id }: TextProps) => {
-  
+export const Text = ({ text, id, checked }: TextProps) => {
+
   const handleClick = () => {
   };
   return (
@@ -16,7 +16,7 @@ export const Text = ({ text, id }: TextProps) => {
       className={styles.taskText}
       onClick={handleClick}
     >
-      <TaskCheckbox id={id} />
+      <TaskCheckbox id={id} checked={checked} />
       {text}
     </div>
   );
