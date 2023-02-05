@@ -1,5 +1,5 @@
 import { Reorder, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import useToDoStore, { TaskType } from '../../../data/store/useToDoStore';
 import Task from './Task';
@@ -7,14 +7,12 @@ import Task from './Task';
 import styles from './Tasks.module.scss';
 
 const Tasks = () => {
-  const [tasks, updateTask, removeTask, setTasks] = useToDoStore(
-    (state) => [
-      state.tasks,
-      state.updateTask,
-      state.removeTask,
-      state.setTasks,
-    ]
-  );
+  const [tasks, updateTask, removeTask, setTasks] = useToDoStore((state) => [
+    state.tasks,
+    state.updateTask,
+    state.removeTask,
+    state.setTasks,
+  ]);
 
   return (
     <Reorder.Group
