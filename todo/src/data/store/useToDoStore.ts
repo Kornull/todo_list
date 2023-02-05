@@ -42,7 +42,6 @@ const dataTasks = window.localStorage.getItem('userToDoTask')
   ? window.localStorage.getItem('userToDoTask')
   : '[]';
 
-
 const useToDoStore = create<ToDo>(
   localSrorageUpdate(
     devtools((set, get) => ({
@@ -61,6 +60,7 @@ const useToDoStore = create<ToDo>(
           tasks: [newTask].concat(tasks),
         });
       },
+
       updateTask: (id, title) => {
         const { tasks } = get();
         set({
@@ -70,6 +70,7 @@ const useToDoStore = create<ToDo>(
           })),
         });
       },
+
       removeTask: (id) => {
         const { tasks } = get();
         console.log('remove', tasks, 'remove');
@@ -100,6 +101,7 @@ const useToDoStore = create<ToDo>(
           tasks: [...newTasks, ...readyTask],
         });
       },
+
       removeReadyTask: (id, checked) => {
         const { tasks } = get();
         set({

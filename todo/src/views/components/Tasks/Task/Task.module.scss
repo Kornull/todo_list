@@ -52,16 +52,14 @@
     appearance: none;
     width: 18px;
     height: 18px;
-    border-radius:50%;
+    border-radius: 50%;
     border: 2px solid $MidnightBlue;
     outline: none;
     cursor: pointer;
   }
 
   &Checked {
-    position: relative;
     background-color: $MidnightBlue;
-    position: relative;
     background-image: url('public/check_success.svg');
     background-position: center;
     background-size: cover;
