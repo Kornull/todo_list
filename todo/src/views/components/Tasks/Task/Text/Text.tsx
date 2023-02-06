@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Modal from '../../../Modal';
 import { TaskCheckbox } from '../ButtonsTask';
 import styles from '../Task.module.scss';
+import { useModalContext } from '../../../../../data/context';
 
 type TextProps = {
   text: string;
@@ -10,7 +10,14 @@ type TextProps = {
 };
 
 export const Text = ({ text, id, checked }: TextProps) => {
+  const { modal, setModal } = useModalContext();
+
   const handleClick = () => {
+    setModal({
+      ...modal,
+      open: true,
+      text,
+    });
   };
   return (
     <>
