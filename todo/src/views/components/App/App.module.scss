@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 
 .article {
+  max-width: 650px;
   width: 100%;
   background: $White;
   border-radius: 20px;
