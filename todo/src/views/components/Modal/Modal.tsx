@@ -1,16 +1,29 @@
 import { useModalContext } from '../../../data/context';
 
 import styles from './Modal.module.scss';
+import { ModalTask } from './ModalText';
 
 const Modal = () => {
-  const { modal } = useModalContext();
+  const { modal, setModal } = useModalContext();
   const { open, text } = modal;
+
+  const handleClick = () => {
+    setModal({
+      ...modal,
+      open: false,
+      text: '',
+    });
+  };
   return (
     <>
       {open && (
-        <div className={styles.overlay}>
-          <div className={styles.modal}>{modal.text}</div>
-        </div>
+        <>
+          <ModalTask text={text} />
+          <div
+            className={styles.overlay}
+            onClick={handleClick}
+          />
+        </>
       )}
     </>
   );

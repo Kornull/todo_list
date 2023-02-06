@@ -2,14 +2,13 @@ import { createContext, useContext } from 'react';
 
 export type ModalInfo = {
   open: boolean;
-  text: string | null;
-  task?: boolean;
+  text: string;
   edit?: boolean;
 };
 
 export const InitialState: ModalInfo = {
   open: false,
-  text: null,
+  text: '',
 };
 
 export type ModalSettings = {
@@ -20,7 +19,7 @@ export type ModalSettings = {
 export const InitialModal: ModalSettings = {
   modal: {
     open: false,
-    text: null,
+    text: '',
   },
   setModal: () => {},
 };
