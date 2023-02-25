@@ -2,14 +2,22 @@ import styles from '../Task.module.scss';
 
 type RemoveProps = {
   remove: (id: string) => void;
-  id:string
+  id: string;
 };
 
+enum REMOVE_TASK {
+  QUESTION = 'Are you sure you want to delete the task?',
+}
+
 export const TaskRemove = ({ remove, id }: RemoveProps) => {
+  const onClick = () => {
+    const res = confirm(REMOVE_TASK.QUESTION);
+    if (res) remove(id);
+  };
   return (
     <button
       className={styles.taskRemove}
-      onClick={() => remove(id)}
+      onClick={onClick}
     />
   );
 };
