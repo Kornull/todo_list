@@ -6,9 +6,8 @@ import Task from './Task';
 import styles from './Tasks.module.scss';
 
 const Tasks = () => {
-  const [tasks, updateTask, removeTask, setTasks] = useToDoStore((state) => [
+  const [tasks, removeTask, setTasks] = useToDoStore((state) => [
     state.tasks,
-    state.updateTask,
     state.removeTask,
     state.setTasks,
   ]);
