@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { TaskCheckbox } from '../ButtonsTask';
-import styles from '../Task.module.scss';
 import { useModalContext } from '../../../../../data/context';
+
+import styles from '../Task.module.scss';
 
 type TextProps = {
   text: string;
@@ -19,6 +19,7 @@ export const Text = ({ text, id, checked }: TextProps) => {
       text,
     });
   };
+
   return (
     <>
       <div

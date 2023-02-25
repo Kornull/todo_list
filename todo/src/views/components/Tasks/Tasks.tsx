@@ -28,7 +28,6 @@ const Tasks = () => {
             id={task.id}
             title={task.title}
             checked={task.checked}
-            onEdit={updateTask}
             onRemove={removeTask}
             task={task}
           />

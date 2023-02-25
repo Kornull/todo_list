@@ -48,7 +48,6 @@ const useToDoStore = create<ToDo>(
       tasks: JSON.parse(dataTasks as string),
       createTask: (title) => {
         const { tasks } = get();
-        console.log(tasks);
         const newTask = {
           id: generateId(),
           title,
@@ -73,13 +72,10 @@ const useToDoStore = create<ToDo>(
 
       removeTask: (id) => {
         const { tasks } = get();
-        console.log('remove', tasks, 'remove');
+
         set({
           tasks: tasks.filter((task) => task.id !== id),
         });
-        setTimeout(() => {
-          console.log('REMOVE', tasks);
-        }, 5000);
       },
 
       setTasks: (todo) => {

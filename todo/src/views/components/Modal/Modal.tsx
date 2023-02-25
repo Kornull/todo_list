@@ -1,24 +1,34 @@
 import { useModalContext } from '../../../data/context';
+import useToDoStore from '../../../data/store/useToDoStore';
 
-import styles from './Modal.module.scss';
 import { ModalTask } from './ModalText';
 
+import styles from './Modal.module.scss';
+
 const Modal = () => {
+  const [updateTask] = useToDoStore((state) => [state.updateTask]);
   const { modal, setModal } = useModalContext();
-  const { open, text } = modal;
+  const { open, text, edit, id } = modal;
 
   const handleClick = () => {
+    if (edit && text.length) updateTask(id, text);
+
     setModal({
-      ...modal,
       open: false,
+      edit: false,
       text: '',
+      id: '',
     });
   };
+
   return (
     <>
       {open && (
         <>
-          <ModalTask text={text} />
+          <ModalTask
+            title={text}
+            isEdit={edit}
+          />
           <div
             className={styles.overlay}
             onClick={handleClick}

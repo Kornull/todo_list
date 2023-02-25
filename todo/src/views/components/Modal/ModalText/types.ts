@@ -1,3 +1,4 @@
 export type ModalTypes = {
-  text: string;
+  title: string;
+  isEdit: boolean;
 };
