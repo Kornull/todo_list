@@ -1,4 +1,4 @@
-import {RiDeleteBinLine} from 'react-icons/ri'
+import { RiDeleteBinLine } from 'react-icons/ri';
 
 import styles from '../Task.module.scss';
 
@@ -21,7 +21,7 @@ export const TaskRemove = ({ remove, id }: RemoveProps) => {
       className={styles.taskButton}
       onClick={onClick}
     >
-      <RiDeleteBinLine className={styles.taskIcon}/>
+      <RiDeleteBinLine className={styles.taskIcon} />
     </button>
   );
 };

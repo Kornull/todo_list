@@ -3,10 +3,8 @@ import { Reorder } from 'framer-motion';
 import { variants } from '../../../../constants';
 import { TaskType } from '../../../../data/store/useToDoStore';
 
-
 import { TaskEdit, TaskRemove } from './ButtonsTask';
 import { Text } from './Text';
-
 
 import styles from './Task.module.scss';
 
@@ -18,7 +16,7 @@ type TaskProps = {
   task: TaskType;
 };
 
-const Task = ({ id, title,onRemove, task, checked }: TaskProps) => {
+const Task = ({ id, title, onRemove, task, checked }: TaskProps) => {
   return (
     <Reorder.Item
       as="div"

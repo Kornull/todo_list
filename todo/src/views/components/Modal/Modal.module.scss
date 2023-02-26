@@ -66,10 +66,11 @@
     font-size: 18px;
     margin: 5px auto;
     padding: 5px;
+    border-radius: 5px;
     box-shadow: 0 0 5px $DarkSlateBlue;
-    
+
     &:focus {
-      box-shadow: 0 0 5px $DodgerBlue;
+      box-shadow: 0 0 5px $BlueLight;
     }
   }
 

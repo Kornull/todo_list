@@ -1,12 +1,13 @@
-import useToDoStore from '../../../data/store/useToDoStore';
+import { useState } from 'react';
+
+import { ModalInfo, ContextModal, InitialState } from '../../../data/context';
+import useToDoStore from '../../../data/store';
+
 import InputAddTask from '../InputAddTask';
 import Modal from '../Modal';
 import Tasks from '../Tasks';
 
-import { ModalInfo, ContextModal, InitialState } from '../../../data/context';
-
 import styles from './App.module.scss';
-import { useState } from 'react';
 
 const App: React.FC = () => {
   const [tasks, createTask, updateTask, removeTask] = useToDoStore((state) => [
@@ -28,13 +29,13 @@ const App: React.FC = () => {
         <div className={styles.article}>
           <h1 className={styles.articleTitle}>To Do App</h1>
 
-            <InputAddTask addNewTask={createNewTask} />
+          <InputAddTask addNewTask={createNewTask} />
 
-            {!tasks.length ? (
-              <p className={styles.articleText}>There is no one task!</p>
-            ) : (
-              <Tasks />
-            )}
+          {!tasks.length ? (
+            <p className={styles.articleText}>There is no one task!</p>
+          ) : (
+            <Tasks />
+          )}
         </div>
         <Modal />
       </ContextModal.Provider>

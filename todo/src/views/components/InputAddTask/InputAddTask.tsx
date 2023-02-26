@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import {TbFilePlus} from 'react-icons/tb'
+import { TbFilePlus } from 'react-icons/tb';
 
 import styles from './InputAddTask.module.scss';
 
@@ -37,7 +37,7 @@ const InputAddTask = ({ addNewTask }: InputPlusProps) => {
         title="add task"
         onClick={addTask}
       >
-        <TbFilePlus className={styles.inputIcon}/>
+        <TbFilePlus className={styles.inputIcon} />
       </button>
     </div>
   );
