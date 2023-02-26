@@ -1,5 +1,5 @@
 import useToDoStore from '../../../data/store/useToDoStore';
-import InputPlus from '../InputPlus';
+import InputAddTask from '../InputAddTask';
 import Modal from '../Modal';
 import Tasks from '../Tasks';
 
@@ -29,7 +29,7 @@ const App: React.FC = () => {
           <h1 className={styles.articleTitle}>To Do App</h1>
 
           <section className={styles.articleSection}>
-            <InputPlus addNewTask={createNewTask} />
+            <InputAddTask addNewTask={createNewTask} />
           </section>
 
           <section className={styles.articleSection}>

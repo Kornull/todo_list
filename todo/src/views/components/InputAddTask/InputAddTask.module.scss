@@ -36,12 +36,7 @@
   }
 
   &Button {
-    padding: 20px;
     background-color: $DarkSlateBlue;
-    background-image: url('public/plus.svg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: 1px solid $MidnightBlue;
@@ -52,12 +47,25 @@
     &:hover {
       background-color: $MidnightBlue;
     }
+
     &:active {
       background-color: $SlateBlue;
       box-shadow: 2px 0 10px $SlateBlue;
     }
   }
+
   :active > &Value {
     box-shadow: 0 0 10px $SlateBlue;
+  }
+
+  &Icon {
+    width: 37px;
+    height: 37px;
+    color: $LightGrey;
+    transition: color .2s linear;
+
+    &:hover {
+      color: $LawnGreen;
+    }
   }
 }

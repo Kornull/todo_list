@@ -1,11 +1,13 @@
 import { useCallback, useState } from 'react';
-import styles from './InputPlus.module.scss';
+import {TbFilePlus} from 'react-icons/tb'
+
+import styles from './InputAddTask.module.scss';
 
 type InputPlusProps = {
   addNewTask: (title: string) => void;
 };
 
-const InputPlus = ({ addNewTask }: InputPlusProps) => {
+const InputAddTask = ({ addNewTask }: InputPlusProps) => {
   const [inputValue, setInputValue] = useState('');
 
   const addTask = useCallback(() => {
@@ -34,9 +36,11 @@ const InputPlus = ({ addNewTask }: InputPlusProps) => {
         aria-label="add task"
         title="add task"
         onClick={addTask}
-      />
+      >
+        <TbFilePlus className={styles.inputIcon}/>
+      </button>
     </div>
   );
 };
 
-export default InputPlus;
+export default InputAddTask;
