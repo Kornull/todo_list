@@ -9,8 +9,8 @@ type TextProps = {
   checked: boolean;
 };
 
-export const Text = ({ text, id, checked }: TextProps) => {
-  const { modal, setModal } = useModalContext();
+export const Text = ({text, id, checked}: TextProps) => {
+  const {modal, setModal} = useModalContext();
 
   const handleClick = () => {
     setModal({
@@ -23,14 +23,14 @@ export const Text = ({ text, id, checked }: TextProps) => {
   return (
     <>
       <div
-        className={styles.taskText}
-        onClick={handleClick}
+        className={ styles.taskText }
+        onClick={ handleClick }
       >
         <TaskCheckbox
-          id={id}
-          checked={checked}
+          id={ id }
+          checked={ checked }
         />
-        {text}
+        { text.trim().length > 26 ? `${ text.substring(0, 26) }...` : text }
       </div>
     </>
   );
