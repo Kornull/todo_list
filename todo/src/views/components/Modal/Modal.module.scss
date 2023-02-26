@@ -14,13 +14,12 @@
   border-radius: 15px;
   box-shadow: 0 0 10px #19197096;
   transform: translate(-50%, -50%);
-  overflow: hidden;
   z-index: 16;
 
   @media (max-width: 516px) {
     max-width: 80%;
     padding: 8px;
-    height: 60%;
+    height: 50%;
   }
 
   &Title {
@@ -38,6 +37,7 @@
       background: #000000bb;
       box-shadow: 0 2px 4px #16151585;
     }
+
     @media (max-width: 516px) {
       font-size: 18px;
     }
@@ -46,14 +46,10 @@
   &Text {
     width: 94%;
     height: 88%;
-    font-size: 16px;
-    margin: 0 auto;
+    font-size: 18px;
     overflow: hidden;
     overflow-y: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-right: 4px;
-    padding-top: 4px;
+    margin: 5px auto;
     padding: 5px 4px 5px 0;
     word-wrap: break-word;
     @media (max-width: 516px) {
@@ -61,7 +57,8 @@
       margin-top: 10px;
     }
   }
-  TextArea {
+
+  &TextArea {
     display: block;
     max-width: 88%;
     width: 100%;
@@ -70,9 +67,28 @@
     margin: 5px auto;
     padding: 5px;
     box-shadow: 0 0 5px $DarkSlateBlue;
-
+    
     &:focus {
       box-shadow: 0 0 5px $DodgerBlue;
+    }
+  }
+
+  &Button {
+    position: absolute;
+    top: -26px;
+    right: -26px;
+    border-radius: 50%;
+    background: none;
+  }
+
+  &Icon {
+    width: 30px;
+    height: 30px;
+    color: $Navy;
+    transition: color .2s linear;
+
+    &:hover {
+      color: $Red;
     }
   }
 }

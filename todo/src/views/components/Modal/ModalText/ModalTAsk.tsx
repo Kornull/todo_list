@@ -1,6 +1,8 @@
 import { ChangeEvent, useCallback, useState } from 'react';
+import { BsXCircle } from 'react-icons/bs';
+import {BiXCircle}  from 'react-icons/bi'
 
-import { useModalContext } from '../../../../data/context/modalContext';
+import { useModalContext } from '../../../../data/context';
 import useToDoStore from '../../../../data/store/useToDoStore';
 
 import { ModalTypes } from './types';
@@ -14,10 +16,10 @@ enum MODAL_VALUE {
   ENTER = 'Enter',
 }
 
-export const ModalTask = ({ title, isEdit }: ModalTypes) => {
+export const ModalTask = ({title, isEdit}: ModalTypes) => {
   const [updateTask] = useToDoStore((state) => [state.updateTask]);
-  const { modal, setModal } = useModalContext();
-  const { text, id } = modal;
+  const {modal, setModal} = useModalContext();
+  const {text, id} = modal;
 
   const [textValue, setTextValue] = useState(title);
 
@@ -42,27 +44,30 @@ export const ModalTask = ({ title, isEdit }: ModalTypes) => {
   };
 
   return (
-    <div className={styles.modal}>
-      <h3 className={styles.modalTitle}>
-        {isEdit ? MODAL_VALUE.CHANGE : MODAL_VALUE.TASK}
+    <div className={ styles.modal }>
+      <h3 className={ styles.modalTitle }>
+        { isEdit ? MODAL_VALUE.CHANGE : MODAL_VALUE.TASK }
       </h3>
-      <div className={styles.modalText}>
-        {isEdit ? (
+      <div className={ styles.modalText }>
+        { isEdit ? (
           <textarea
-            value={textValue}
-            className={styles.modalTextArea}
-            onChange={handleChange}
-            onKeyDown={(ev) => {
+            value={ textValue }
+            className={ styles.modalTextArea }
+            onChange={ handleChange }
+            onKeyDown={ (ev) => {
               if (ev.key === MODAL_VALUE.ENTER) {
                 addTask();
               }
-            }}
-            placeholder={MODAL_VALUE.PLACEHOLDER}
+            } }
+            placeholder={ MODAL_VALUE.PLACEHOLDER }
           />
         ) : (
           text
-        )}
+        ) }
       </div>
+      <button className={ styles.modalButton } onClick={ addTask }>
+        <BiXCircle className={ styles.modalIcon }/>
+      </button>
     </div>
   );
 };
