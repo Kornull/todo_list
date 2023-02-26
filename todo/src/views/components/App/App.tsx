@@ -28,17 +28,13 @@ const App: React.FC = () => {
         <div className={styles.article}>
           <h1 className={styles.articleTitle}>To Do App</h1>
 
-          <section className={styles.articleSection}>
             <InputAddTask addNewTask={createNewTask} />
-          </section>
 
-          <section className={styles.articleSection}>
             {!tasks.length ? (
               <p className={styles.articleText}>There is no one task!</p>
             ) : (
               <Tasks />
             )}
-          </section>
         </div>
         <Modal />
       </ContextModal.Provider>

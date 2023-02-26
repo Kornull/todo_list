@@ -3,6 +3,7 @@
 .article {
   max-width: 650px;
   width: 100%;
+  max-height: 90vh;
   background: $White;
   border-radius: 20px;
   padding: 20px 55px;
@@ -20,7 +21,7 @@
     text-align: center;
 
     @media (max-width: $size420px) {
-      font-size: 26px;
+      font-size: 24px;
     }
   }
 
