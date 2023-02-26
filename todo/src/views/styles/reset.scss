@@ -38,7 +38,11 @@ html {
 body {
   width: 100%;
   font: 16px/1.4 'Roboto', sans-serif;
-  background: #6581ce;
+  background-color: #6581ce;
+  background-image: url('public/todo21.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
   // padding: 0 15px;
   box-sizing: border-box;

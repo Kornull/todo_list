@@ -15,7 +15,7 @@
 ::-webkit-scrollbar {
   width: 7px;
   @media (max-width: 516px) {
-     width: 3px;
+    width: 3px;
   }
 }
 
@@ -27,5 +27,5 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: linear-gradient(180deg, $AquaLight, $BlueLight);
+  background: linear-gradient(180deg, $DarkMagenta, $Gold);
 }
