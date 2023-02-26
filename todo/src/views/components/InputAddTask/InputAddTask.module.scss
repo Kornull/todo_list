@@ -36,7 +36,7 @@
   }
 
   &Button {
-    background-color: $DarkSlateBlue;
+    background-color: $MediumPurple;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: 1px solid $MidnightBlue;
@@ -45,7 +45,7 @@
     transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
 
     &:hover {
-      background-color: $MidnightBlue;
+      background-color: $BlueViolet;
     }
 
     &:active {
@@ -61,11 +61,11 @@
   &Icon {
     width: 37px;
     height: 37px;
-    color: $LightGrey;
+    color: $White;
     transition: color .2s linear;
 
     &:hover {
-      color: $LawnGreen;
+      color: $Gold;
     }
   }
 }

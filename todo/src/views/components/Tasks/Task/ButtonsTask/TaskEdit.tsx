@@ -1,4 +1,5 @@
-import { useModalContext } from '../../../../../data/context/modalContext';
+import { useModalContext } from '../../../../../data/context';
+import { RiEdit2Line } from 'react-icons/ri'
 
 import styles from '../Task.module.scss';
 
@@ -7,8 +8,8 @@ type EditProps = {
   title: string;
 };
 
-export const TaskEdit = ({ id, title }: EditProps) => {
-  const { setModal } = useModalContext();
+export const TaskEdit = ({id, title}: EditProps) => {
+  const {setModal} = useModalContext();
 
   const handleClick = () => {
     setModal({
@@ -21,8 +22,10 @@ export const TaskEdit = ({ id, title }: EditProps) => {
 
   return (
     <button
-      className={styles.taskEdit}
-      onClick={handleClick}
-    />
+      className={ styles.taskButton }
+      onClick={ handleClick }
+    >
+      <RiEdit2Line className={styles.taskIcon}/>
+    </button>
   );
 };

@@ -26,7 +26,7 @@ export const TaskCheckbox = ({ id, checked }: CheckboxProps) => {
     <div className={styles.taskCheckboxWrapper}>
       <input
         type="checkbox"
-        className={checked ? styles.taskChecked : ''}
+        className={checked ? styles.taskChecked : styles.taskNotChecked}
         onClick={handleClick}
       />
     </div>
