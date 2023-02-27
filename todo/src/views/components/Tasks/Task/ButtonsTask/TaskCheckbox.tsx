@@ -1,11 +1,9 @@
 import useToDoStore from '../../../../../data/store';
 
 import styles from '../Task.module.scss';
+import { CheckboxProps } from './types';
 
-type CheckboxProps = {
-  id: string;
-  checked: boolean;
-};
+
 
 export const TaskCheckbox = ({ id, checked }: CheckboxProps) => {
   const [setReadyTask, removeReadyTask] = useToDoStore((state) => [

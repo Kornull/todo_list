@@ -4,16 +4,9 @@ import { BiXCircle } from 'react-icons/bi';
 import { useModalContext } from '../../../../data/context';
 import useToDoStore from '../../../../data/store';
 
-import { ModalTypes } from './types';
+import { ModalTypes, MODAL_VALUE } from './types';
 
 import styles from '../Modal.module.scss';
-
-enum MODAL_VALUE {
-  CHANGE = 'Change task:',
-  TASK = 'Your task:',
-  PLACEHOLDER = 'Replace task...',
-  ENTER = 'Enter',
-}
 
 export const ModalTask = ({ title, isEdit }: ModalTypes) => {
   const [updateTask] = useToDoStore((state) => [state.updateTask]);

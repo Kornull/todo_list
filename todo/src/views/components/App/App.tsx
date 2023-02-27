@@ -10,7 +10,7 @@ import Tasks from '../Tasks';
 import styles from './App.module.scss';
 
 const App: React.FC = () => {
-  const [tasks, createTask, updateTask, removeTask] = useToDoStore((state) => [
+  const [tasks, createTask] = useToDoStore((state) => [
     state.tasks,
     state.createTask,
     state.updateTask,

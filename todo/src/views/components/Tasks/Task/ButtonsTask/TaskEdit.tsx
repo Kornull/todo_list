@@ -1,12 +1,9 @@
 import { useModalContext } from '../../../../../data/context';
 import { RiEdit2Line } from 'react-icons/ri';
 
-import styles from '../Task.module.scss';
+import { BUTTONS_TASK, EditProps } from './types';
 
-type EditProps = {
-  id: string;
-  title: string;
-};
+import styles from '../Task.module.scss';
 
 export const TaskEdit = ({ id, title }: EditProps) => {
   const { setModal } = useModalContext();
@@ -24,6 +21,7 @@ export const TaskEdit = ({ id, title }: EditProps) => {
     <button
       className={styles.taskButton}
       onClick={handleClick}
+      title={BUTTONS_TASK.EDIT}
     >
       <RiEdit2Line className={styles.taskIcon} />
     </button>

@@ -50,7 +50,7 @@ const useToDoStore = create<ToDo>(
         const { tasks } = get();
         const newTask = {
           id: generateId(),
-          title,
+          title: title.replace(/\s+/g, ' ').trim(),
           createAt: Date.now(),
           checked: false,
         };
@@ -65,7 +65,7 @@ const useToDoStore = create<ToDo>(
         set({
           tasks: tasks.map((task) => ({
             ...task,
-            title: task.id === id ? title : task.title,
+            title: task.id === id ? title.replace(/\s+/g, ' ').trim() : task.title,
           })),
         });
       },

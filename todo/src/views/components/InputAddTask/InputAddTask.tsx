@@ -3,6 +3,12 @@ import { TbFilePlus } from 'react-icons/tb';
 
 import styles from './InputAddTask.module.scss';
 
+enum INPUT_ADD_TASK {
+  ADD_TASK = 'add task',
+  WRITE = 'Type here...',
+  ENTER = 'Enter',
+}
+
 type InputPlusProps = {
   addNewTask: (title: string) => void;
 };
@@ -25,16 +31,16 @@ const InputAddTask = ({ addNewTask }: InputPlusProps) => {
         value={inputValue}
         onChange={(ev) => setInputValue(ev.target.value)}
         onKeyDown={(ev) => {
-          if (ev.key === 'Enter') {
+          if (ev.key === INPUT_ADD_TASK.ENTER) {
             addTask();
           }
         }}
-        placeholder="Type here"
+        placeholder={INPUT_ADD_TASK.WRITE}
       />
       <button
         className={styles.inputButton}
-        aria-label="add task"
-        title="add task"
+        aria-label={INPUT_ADD_TASK.ADD_TASK}
+        title={INPUT_ADD_TASK.ADD_TASK}
         onClick={addTask}
       >
         <TbFilePlus className={styles.inputIcon} />

@@ -4,7 +4,7 @@ import { variants } from '../../../../constants';
 import { TaskType } from '../../../../data/store/useToDoStore';
 
 import { TaskEdit, TaskRemove } from './ButtonsTask';
-import { Text } from './Text';
+import { Text } from './TaskText';
 
 import styles from './Task.module.scss';
 
