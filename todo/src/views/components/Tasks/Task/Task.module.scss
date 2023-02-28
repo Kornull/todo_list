@@ -1,0 +1,77 @@
+@import '../../../styles/colors.scss';
+
+.task {
+  position: relative;
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+
+  @media (max-width: $size620px) {
+    max-width: 96%;
+  }
+
+  &Button{
+    background-color: $MediumPurple;
+    border: 1px solid $Black;
+    border-radius: 5px;
+    transition: background-color .2s linear;
+
+    &:hover {
+      background-color: $BlueViolet;
+    }
+  }
+
+  &Text {
+    position: relative;
+    font-size: 20px;
+    max-width: 80%;
+    width: 100%;
+    padding: 6px 28px;
+    border: 1px solid $Black;
+    background-color: $LightGrey;
+    border-radius: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &CheckboxWrapper {
+    position: absolute;
+    left: 5px;
+    top: 18%;
+  }
+
+  &CheckboxWrapper input[type='checkbox'] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid $MidnightBlue;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &Checked {
+    background-color: $Coral;
+  }
+
+  &NotChecked {
+    background-color: $White;
+  }
+
+  &Icon {
+    width: 36px;
+    height: 36px;
+    color: $White;
+    transition: color .2s linear;
+
+    &:hover {
+      color: $Gold;
+    }
+  }
+}
