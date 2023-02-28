@@ -58,6 +58,12 @@
     }
   }
 
+  &TextAreaBlock {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   &TextArea {
     display: block;
     max-width: 88%;
@@ -67,10 +73,29 @@
     margin: 5px auto;
     padding: 5px;
     border-radius: 5px;
-    box-shadow: 0 0 5px $DarkSlateBlue;
+    box-shadow: 0 0 2px $DarkSlateBlue;
 
     &:focus {
       box-shadow: 0 0 5px $BlueLight;
+    }
+  }
+
+  &TextAreaButton {
+    width: 30px;
+    height: 30px;
+    margin: 5px auto 0;
+    background: $BlueViolet;
+    border-radius: 5px;
+  }
+
+  &TextAreaIcon {
+    width: 30px;
+    height: 30px;
+    color: $White;
+    transition: color .2s linear;
+
+    &:hover {
+      color: $Gold;
     }
   }
 
@@ -86,7 +111,7 @@
     width: 30px;
     height: 30px;
     color: $Navy;
-    transition: color .2s linear;
+    transition: color 0.2s linear;
 
     &:hover {
       color: $Red;

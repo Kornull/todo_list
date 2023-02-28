@@ -7,6 +7,7 @@ import useToDoStore from '../../../../data/store';
 import { ModalTypes, MODAL_VALUE } from './types';
 
 import styles from '../Modal.module.scss';
+import { ModalTextArea } from './ModalTextArea/ModalTextArea';
 
 export const ModalTask = ({ title, isEdit }: ModalTypes) => {
   const [updateTask] = useToDoStore((state) => [state.updateTask]);
@@ -42,16 +43,10 @@ export const ModalTask = ({ title, isEdit }: ModalTypes) => {
       </h3>
       <div className={styles.modalText}>
         {isEdit ? (
-          <textarea
-            value={textValue}
-            className={styles.modalTextArea}
-            onChange={handleChange}
-            onKeyDown={(ev) => {
-              if (ev.key === MODAL_VALUE.ENTER) {
-                addTask();
-              }
-            }}
-            placeholder={MODAL_VALUE.PLACEHOLDER}
+          <ModalTextArea
+            text={textValue}
+            handleChange={handleChange}
+            addTask={addTask}
           />
         ) : (
           text
