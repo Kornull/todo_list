@@ -11,7 +11,9 @@
 * ### *Vite* 
 * ### *React-icons* 
 * ### *Framer-motion* 
-* ### *LocalStorage* 
+* ### *LocalStorage*
+* ### *SCSS modules* 
+
 
 
 ## Details:
