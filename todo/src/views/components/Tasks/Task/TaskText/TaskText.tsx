@@ -30,7 +30,7 @@ export const Text = ({ text, id, checked }: TextProps) => {
           id={id}
           checked={checked}
         />
-        {text.length > 25 ? `${text.substring(0, 25)}...` : text}
+        {text}
       </div>
     </>
   );
