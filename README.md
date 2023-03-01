@@ -27,4 +27,4 @@
  * #### *view on the screen from 320 pixels*
 ---
 
-Follow this [link](https://kornull-personal-todo.netlify.app)
+Follow this [link](https://kornull-personal-todo.netlify.app/)
