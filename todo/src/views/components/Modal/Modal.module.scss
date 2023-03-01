@@ -44,7 +44,7 @@
   }
 
   &Text {
-    width: 94%;
+    width: 98%;
     height: 88%;
     font-size: 18px;
     overflow: hidden;
@@ -66,8 +66,7 @@
 
   &TextArea {
     display: block;
-    max-width: 88%;
-    width: 100%;
+    width: 98%;
     height: 88%;
     font-size: 18px;
     margin: 5px auto;
@@ -101,15 +100,15 @@
 
   &Button {
     position: absolute;
-    top: -26px;
-    right: -26px;
+    top: -30px;
+    right: -30px;
     border-radius: 50%;
     background: none;
   }
 
   &Icon {
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
     color: $Navy;
     transition: color 0.2s linear;
 

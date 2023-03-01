@@ -1,13 +1,13 @@
 import { ChangeEvent, useCallback, useState } from 'react';
 import { BiXCircle } from 'react-icons/bi';
 
-import { useModalContext } from '../../../../data/context';
-import useToDoStore from '../../../../data/store';
+import { useModalContext } from 'data/context';
+import useToDoStore from 'data/store';
 
 import { ModalTypes, MODAL_VALUE } from './types';
 
-import styles from '../Modal.module.scss';
 import { ModalTextArea } from './ModalTextArea/ModalTextArea';
+import styles from '../Modal.module.scss';
 
 export const ModalTask = ({ title, isEdit }: ModalTypes) => {
   const [updateTask] = useToDoStore((state) => [state.updateTask]);

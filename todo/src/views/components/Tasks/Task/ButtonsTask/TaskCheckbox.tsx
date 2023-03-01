@@ -1,4 +1,4 @@
-import useToDoStore from '../../../../../data/store';
+import useToDoStore from 'data/store';
 
 import styles from '../Task.module.scss';
 import { CheckboxProps } from './types';

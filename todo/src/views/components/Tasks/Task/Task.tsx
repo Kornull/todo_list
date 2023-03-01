@@ -1,7 +1,8 @@
 import { Reorder } from 'framer-motion';
 
-import { variants } from '../../../../constants';
-import { TaskType } from '../../../../data/store/useToDoStore';
+
+import { variants } from 'constants';
+import { TaskType } from 'data/store/useToDoStore';
 
 import { TaskEdit, TaskRemove } from './ButtonsTask';
 import { Text } from './TaskText';
