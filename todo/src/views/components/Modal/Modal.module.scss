@@ -4,10 +4,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 500px;
+  max-width: 610px;
   width: 100%;
-  min-height: 200px;
-  height: 25%;
+  height: 58%;
   padding: 15px;
   background: $White;
   border: 1px solid #0000006b;
@@ -16,10 +15,10 @@
   transform: translate(-50%, -50%);
   z-index: 16;
 
-  @media (max-width: 516px) {
+  @media (max-width: 668px) {
     max-width: 80%;
+    height: 80%;
     padding: 8px;
-    height: 50%;
   }
 
   &Title {
@@ -91,7 +90,7 @@
     width: 30px;
     height: 30px;
     color: $White;
-    transition: color .2s linear;
+    transition: color 0.2s linear;
 
     &:hover {
       color: $Gold;
