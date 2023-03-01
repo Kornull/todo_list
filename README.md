@@ -8,6 +8,7 @@
 * ### *React* 
 * ### *Typescript* 
 * ### *Zustand* 
+* ### *React context* 
 * ### *Vite* 
 * ### *React-icons* 
 * ### *Framer-motion* 
