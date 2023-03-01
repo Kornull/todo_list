@@ -1,7 +1,7 @@
 # Personal Todo List
 
 ## Screen:
-![todo](https://user-images.githubusercontent.com/96052707/221981232-557a9735-65a8-4c8c-adfd-572ce0c8acc9.gif)
+![todo](https://user-images.githubusercontent.com/96052707/222109026-ee66b7e1-9ba9-4e84-ac44-106b3488950f.gif)
 
 
 ## Technology: 
