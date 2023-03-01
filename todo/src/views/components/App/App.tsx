@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import { ModalInfo, ContextModal, InitialState } from '../../../data/context';
-import useToDoStore from '../../../data/store';
+import { ModalInfo, ContextModal, InitialState } from 'data/context';
+import useToDoStore from 'data/store';
 
 import InputAddTask from '../InputAddTask';
 import Modal from '../Modal';

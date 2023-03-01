@@ -1,5 +1,5 @@
-import { useModalContext } from '../../../data/context';
-import useToDoStore from '../../../data/store';
+import useToDoStore from 'data/store';
+import { useModalContext } from 'data/context';
 
 import { ModalTask } from './ModalText';
 

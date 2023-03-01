@@ -1,4 +1,5 @@
-import { useModalContext } from '../../../../../data/context';
+import { useModalContext } from 'data/context';
+
 import { RiEdit2Line } from 'react-icons/ri';
 
 import { BUTTONS_TASK, EditProps } from './types';

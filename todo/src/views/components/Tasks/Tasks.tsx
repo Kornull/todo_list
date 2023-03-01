@@ -1,6 +1,6 @@
+import useToDoStore, { TaskType } from 'data/store/useToDoStore';
 import { Reorder, AnimatePresence } from 'framer-motion';
 
-import useToDoStore, { TaskType } from '../../../data/store/useToDoStore';
 import Task from './Task';
 
 import styles from './Tasks.module.scss';

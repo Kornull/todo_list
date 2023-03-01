@@ -1,5 +1,6 @@
+import { useModalContext } from 'data/context';
+
 import { TaskCheckbox } from '../ButtonsTask';
-import { useModalContext } from '../../../../../data/context';
 
 import styles from '../Task.module.scss';
 
